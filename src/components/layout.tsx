@@ -14,14 +14,14 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="flex min-h-screen">
       <div className="relative flex basis-[80%] flex-col gap-6 p-6 pl-20 pt-8">
         <nav className="flex items-center justify-between">
-          <p className="font-medium text-yellow-700">
-            <span className="relative top-[0.6rem] text-xs font-extrabold uppercase after:absolute after:left-[25px] after:top-[6px] after:h-1 after:w-16 after:bg-yellow-700 after:content-['']">
+          <Link href="/" className="font-black text-tertiary">
+            <span className="relative top-[0.6rem] text-xs font-extrabold uppercase after:absolute after:left-[25px] after:top-[6px] after:h-1 after:w-16 after:bg-tertiary after:content-['']">
               the
             </span>
-            <span className="relative block text-3xl font-semibold uppercase after:absolute after:left-0 after:top-[2.2rem] after:h-1 after:w-[5.6rem] after:bg-yellow-700 after:content-['']">
+            <span className="relative block text-3xl font-semibold uppercase after:absolute after:left-0 after:top-[2.2rem] after:h-1 after:w-[5.6rem] after:bg-tertiary after:content-['']">
               Kusp
             </span>
-          </p>
+          </Link>
           <div>
             {isSignUpPage && (
               <p className="text-sm text-secondary">

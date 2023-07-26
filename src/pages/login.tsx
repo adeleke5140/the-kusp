@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "~/components/button";
 import Layout from "~/components/layout";
 
 const LoginPage = () => {
@@ -14,6 +15,7 @@ const LoginPage = () => {
         <form
           className="flex flex-col gap-4 pr-40"
           onSubmit={(e) => e.preventDefault()}
+          autoComplete="off"
         >
           <div className="flex flex-col gap-1">
             <label htmlFor="email" className="block text-sm">
@@ -25,6 +27,7 @@ const LoginPage = () => {
               id="email"
               placeholder="Enter your username of email address"
               className="rounded-lg border-2 border-gray-200 px-3 py-3"
+              required
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -37,6 +40,7 @@ const LoginPage = () => {
               id="password"
               placeholder="Enter your password"
               className="rounded-lg border-2 border-gray-200 px-3 py-3"
+              required
             />
           </div>
 
@@ -46,9 +50,9 @@ const LoginPage = () => {
           >
             Forgot password?
           </Link>
-          <button className="mt-4 rounded-lg bg-primary py-3 font-medium text-white">
+          <Button>
             Login
-          </button>
+          </Button>
         </form>
       </div>
     </Layout>

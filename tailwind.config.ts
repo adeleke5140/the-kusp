@@ -9,7 +9,8 @@ export default {
       },
       colors: {
         primary: "hsl(181, 92%, 19%)",
-        secondary: '#535E75',
+        secondary: "#535E75",
+        tertiary: "#d4af37",
         hover: "hsl(181, 92%, 25%)",
         focus: "	hsl(181, 92%, 30%)",
       },
