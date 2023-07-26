@@ -1,16 +1,11 @@
 import { createContext, useContext, useState } from "react";
 
 interface FormContextProps {
-  data: { [key: string]: any };
-  setFormValues: (values: any) => void;
+  data: Record<string, unknown>;
+  setFormValues: (values: Record<string, unknown>) => void;
 }
 
-export const FormContext = createContext<FormContextProps>(
-  {
-    data: {},
-    setFormValues: () => { }
-  }
-);
+export const FormContext = createContext<FormContextProps | null>(null);
 
 
 interface FormProviderProps {
@@ -20,7 +15,7 @@ interface FormProviderProps {
 export const FormProvider = ({ children }: FormProviderProps) => {
   const [data, setData] = useState({});
 
-  const setFormValues = (values: any) => {
+  const setFormValues = (values: Record<string, unknown>) => {
     setData((prevValues) => ({
       ...prevValues,
       ...values

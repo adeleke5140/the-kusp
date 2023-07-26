@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import Layout from "~/components/layout";
+import { FormCompleted } from "~/components/signup-form/formCompleted";
 import { FormParent } from "~/components/signup-form/formParent";
 import { CVForm } from "~/components/signup-form/forms/cv";
 import { PersonalInfo } from "~/components/signup-form/forms/personal-info";
@@ -26,6 +27,7 @@ const SignUpPage = () => {
             {formStep === 1 && <Skills formStep={1} nextFormStep={nextFormStep} />}
             {formStep === 2 && <CVForm formStep={2} nextFormStep={nextFormStep} />}
             {formStep === 3 && <SocialLinks formStep={3} nextFormStep={nextFormStep} />}
+            {formStep > 3 && <FormCompleted />}
           </FormParent>
         </section>
       </Layout>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "~/components/layout";
-import { Lora, Merriweather, Alice } from "next/font/google";
+import { Alice } from "next/font/google";
 
 const alice = Alice({
   subsets: ["latin"],

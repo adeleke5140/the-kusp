@@ -7,15 +7,15 @@ interface FormProps {
 }
 
 const Skills = ({ formStep, nextFormStep }: FormProps) => {
-  const { setFormValues } = useFormData()
+  const formData = useFormData()
   const {
     handleSubmit,
     formState: { errors },
     register,
   } = useForm({ mode: "all" })
 
-  const onSubmit = (values: any) => {
-    setFormValues(values)
+  const onSubmit = (values: Record<string, unknown>) => {
+    formData?.setFormValues(values)
     nextFormStep()
   }
   return (
